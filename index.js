@@ -19,7 +19,7 @@ function dofizzBuzz(n) {
     for (let i = 0; i < n + 1; i++) {
         let str = "";
         for (let num of fizzNums) {
-            if (i != 0 && i % num == 0) {
+            if (i !== 0 && i % num == 0) {
                 str += fizzLookup[num];
             }
         }
