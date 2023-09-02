@@ -1,6 +1,6 @@
 
 
-const fizzLookup = {
+let fizzLookup = {
     3: "fizz",
     5: "buzz",
     7: "foo",
@@ -60,6 +60,35 @@ function superFizzBuzz() {
     const clearButton = document.getElementById("clear-fizz-buzz");
     clearButton.addEventListener("mouseup", (ev) => {
         const fizzBuzzOutput = document.getElementById("fizz-buzz-output");
+    })
+
+    const newNumber = document.getElementById("fizz-buzz-new-number");
+    const newWord = document.getElementById("fizz-buzz-new-word");
+    const addNewWord = document.getElementById("fizz-buzz-add-word");
+
+    addNewWord.addEventListener("mouseup", (ev) => {
+        const num = newNumber.value;
+        const word = newWord.value;
+        if (num === "" || word === "") return;
+        if (parseInt(num) === 0) return;
+
+        if (Object.keys(fizzLookup).indexOf(num) === -1) {
+            fizzLookup[num] = word;
+        }
+
+        newNumber.value = "";
+        newWord.value = "";
+
+        alert("added successfully!");
+    })
+
+    const resetTable = document.getElementById("fizz-buzz-reset");
+    resetTable.addEventListener("mouseup", (ev) => {
+        fizzLookup = {
+            3: "fizz",
+            5: "buzz"
+        }
+        alert(`reset table to` + JSON.stringify(fizzLookup));
     })
 }
 
