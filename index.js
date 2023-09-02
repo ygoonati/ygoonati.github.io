@@ -1,18 +1,18 @@
 
 
+const fizzLookup = {
+    3: "fizz",
+    5: "buzz",
+    7: "foo",
+    9: "bar"
+}
+
 /**
  * Does fizzbuzz but it is super
  * @param {number} n
  */
 function dofizzBuzz(n) {
     let fizzBuzzString = "";
-
-    const fizzLookup = {
-        3: "fizz",
-        5: "buzz",
-        7: "foo",
-        9: "bar"
-    }
 
     const fizzNums = Object.keys(fizzLookup);
 
