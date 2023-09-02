@@ -60,6 +60,7 @@ function superFizzBuzz() {
     const clearButton = document.getElementById("clear-fizz-buzz");
     clearButton.addEventListener("mouseup", (ev) => {
         const fizzBuzzOutput = document.getElementById("fizz-buzz-output");
+        fizzBuzzOutput.innertText = "";
     })
 
     const newNumber = document.getElementById("fizz-buzz-new-number");
